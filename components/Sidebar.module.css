@@ -1,0 +1,142 @@
+/* Sidebar container */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 100vh;
+  background-color: #0f0f0f;
+  color: #7a7a7a;
+  padding: 16px 0;
+  border-right: 1px solid #1e90ff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Top content section */
+.topContent {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Profile section styling */
+.profileSection {
+  padding: 0 16px;
+  margin-top: 8px;
+}
+
+.avatarContainer {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Navigation styling */
+.navigation {
+  width: 100%;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.navListItem {
+  width: 100%;
+  margin: 2px 0;
+}
+
+.navItem {
+  display: block;
+  width: 100%;
+  padding: 12px 24px;
+  color: #7a7a7a;
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  font-size: 15px;
+  outline-offset: -2px;
+}
+
+.navItem:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.navItem:focus {
+  outline: 2px solid rgba(30, 144, 255, 0.5);
+}
+
+.navItem.active {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Bottom content styling */
+.bottomContent {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+  margin-top: auto;
+}
+
+.addButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: #7a7a7a;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.1s ease;
+  border-radius: 50%;
+}
+
+.addButton:hover {
+  color: #1e90ff;
+}
+
+.addButton:focus {
+  outline: 2px solid rgba(30, 144, 255, 0.5);
+  color: #1e90ff;
+}
+
+.addButton:active {
+  transform: scale(0.95);
+}
+
+.plusIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 64px;
+  }
+
+  .navItem {
+    padding: 12px;
+    text-align: center;
+  }
+}
