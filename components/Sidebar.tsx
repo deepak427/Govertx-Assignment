@@ -12,18 +12,20 @@ const Sidebar: React.FC<SidebarProps> = ({ activePage }) => {
   const navItems = [
     {
       name: "Dashboard",
-      path: "/dashboard",
+      path: "/",
       ariaLabel: "Navigate to Dashboard",
+      logo: "/icons/dashboard.png"
     },
     {
       name: "Analytics",
-      path: "/analytics",
+      path: "/",
       ariaLabel: "Navigate to Analytics",
+      logo: "/icons/analytics.png"
     },
-    { name: "Connect", path: "/connect", ariaLabel: "Navigate to Connect" },
-    { name: "Dealroom", path: "/dealroom", ariaLabel: "Navigate to Dealroom" },
-    { name: "Profile", path: "/profile", ariaLabel: "Navigate to Profile" },
-    { name: "Settings", path: "/settings", ariaLabel: "Navigate to Settings" },
+    { name: "Connect", path: "/", ariaLabel: "Navigate to Connect", logo: "/icons/connect.png" },
+    { name: "Dealroom", path: "/", ariaLabel: "Navigate to Dealroom", logo: "/icons/dealroom.png" },
+    { name: "Profile", path: "/profile", ariaLabel: "Navigate to Profile", logo: "/icons/profile.png" },
+    { name: "Settings", path: "/", ariaLabel: "Navigate to Settings", logo: "/icons/settings.png" },
   ];
 
   return (
@@ -98,6 +100,37 @@ const Sidebar: React.FC<SidebarProps> = ({ activePage }) => {
           </nav>
         </nav>
       </div>
+
+      <nav className={styles.sidebarBottom}>
+        {/* Navigation Links */}
+        <nav className={styles.navigationBottom} aria-label="Primary navigation">
+          <ul className={styles.navListBottom}>
+            {navItems.map((item) => (
+              <li key={item.name} className={styles.navListItem}>
+                <Link
+                  href={item.path}
+                  className={`${styles.navItemBottom} ${
+                    activePage === item.name.toLowerCase() ? styles.active : ""
+                  }`}
+                  aria-current={
+                    activePage === item.name.toLowerCase() ? "page" : undefined
+                  }
+                  aria-label={item.ariaLabel}
+                >
+                  <Image
+                    src={item.logo}
+                    alt={item.name}
+                    width={25}
+                    height={25}
+                    priority
+                  />
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </nav>
     </aside>
   );
 };

@@ -59,7 +59,7 @@
   border-radius: 1rem;
   font-size: 0.875rem;
   cursor: pointer;
-  border: 1px solid #1D1D1D;
+  border: 1px solid #1d1d1d;
 }
 
 .dropdownIcon {
@@ -78,7 +78,7 @@
 }
 
 .metric .metricInfo {
-  border-right: 1px solid #1D1D1D;
+  border-right: 1px solid #1d1d1d;
 }
 
 .metricValue {
@@ -278,4 +278,67 @@
   font-size: 0.875rem;
   min-width: 2.5rem;
   text-align: right;
+}
+
+.viewMore {
+  margin-top: 1rem;
+}
+
+@media (max-width: 1260px) {
+  .statsCard {
+    flex: 2;
+  }
+
+  .insightsCard {
+    flex: 1;
+  }
+
+  .mapCard {
+    flex: 2;
+  }
+
+  .countryStatsCard {
+    flex: 1;
+  }
+}
+
+@media (max-width: 1080px) {
+  .statsCard {
+    flex: 1;
+  }
+
+  .insightsCard {
+    flex: 1;
+  }
+
+  .mapCard {
+    flex: 1;
+  }
+
+  .countryStatsCard {
+    flex: 1;
+  }
+}
+
+@media (max-width: 975px) {
+  .statsContainer {
+    flex-direction: column;
+  }
+
+  .dashboard {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 895px) {
+  .demographicsContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .demographicsContainer {
+    flex-direction: column;
+  }
+
 }

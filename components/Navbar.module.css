@@ -95,4 +95,30 @@
   .actionLink {
     padding: 0 0.75rem;
   }
+
+  .navbarFirst {
+    display: none;
+  }
+
+  .navbarSecond {
+    top: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .moreSection {
+    display: none;
+  }
+}
+
+@media (max-width: 545px) {
+  .navbar {
+    left: 19.2rem;
+  }
+}
+
+@media (max-width: 502px) {
+  .navbarSecond {
+    display: none;
+  }
 }

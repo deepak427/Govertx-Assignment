@@ -15,6 +15,41 @@
   height: calc(100vh - 3.5rem);
 }
 
+.sidebarBottom {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  background-color: #000000;
+  color: #555555;
+  height: 4rem;
+}
+
+.navigationBottom {
+  width: 100vw;
+  margin-top: 0.5rem;
+}
+
+.navListBottom {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navItemBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-left: 0.8rem;
+  text-decoration: none;
+  color: #555555;
+  transition: color 0.2s ease;
+  font-size: 1rem;
+  outline-offset: -2px;
+}
+
 /* Logo and company name section */
 .brandSection {
   display: flex;
@@ -105,6 +140,15 @@
   font-weight: 500;
 }
 
+.navItemBottom:hover {
+  color: #ffffff;
+}
+
+.navItemBottom.active {
+  color: #ffffff;
+  font-weight: 500;
+}
+
 /* Bottom content styling */
 .bottomContent {
   width: 100%;
@@ -124,14 +168,38 @@
   color: #ffffff;
 }
 
-/* Media query for smaller screens */
 @media (max-width: 768px) {
-  .sidebar {
-    width: 64px;
+  .sidebarMain {
+    display: none;
   }
 
-  .navItem {
-    padding: 12px;
-    text-align: center;
+  .sidebarBottom {
+    display: block;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .navListItem:last-child {
+    display: none;
+  }
+
+}
+
+@media (max-width: 545px) {
+  .navListItem img {
+    width: 20px;
+    height: 20px;
+  }
+
+}
+
+@media (max-width: 502px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  .navListItem:nth-last-child(3) {
+    display: none;
   }
 }
