@@ -1,0 +1,98 @@
+.navbarOuter {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  align-items: stretch;
+  background-color: #000000;
+  color: #ffffff;
+  width: calc(100% - 15.5rem);
+  position: fixed;
+  left: 15.5rem;
+  height: 3.5rem;
+}
+
+.navbarSecond {
+  top: calc(3.5rem - 2px);
+  border-top: 2px solid #1d1d1d;
+}
+
+.logo {
+  display: block;
+}
+
+.companyName {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Analytics section with tabs */
+
+.analyticsSection {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #1d1d1d;
+  flex-grow: 1;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  padding-left: 2rem;
+  margin: 0;
+}
+
+/* Action links section */
+.actionsSection {
+  display: flex;
+  align-items: center;
+}
+
+.Status {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #1d1d1d;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.moreSection {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.actionLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  border-left: 1px solid #1d1d1d;
+  transition: background-color 0.2s ease;
+}
+
+.actionLink:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .brandSection {
+    min-width: auto;
+  }
+
+  .companyName {
+    display: none;
+  }
+
+  .tab,
+  .actionLink {
+    padding: 0 0.75rem;
+  }
+}
